@@ -94,7 +94,7 @@ PAYMENT_API_KEY=your_payment_gateway_key
 
 ### Frontend `.env`
 ```
-REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_API_URL=http://localhost:7000/api
 REACT_APP_PAYMENT_KEY=your_payment_gateway_key
 ```
 
