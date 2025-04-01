@@ -1,0 +1,78 @@
+📂 Project Directory Tree
+
+├── .env
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── package-lock.json
+├── package.json
+├── public
+│   └── temp
+│       └── token.js
+├── README.md
+├── src
+│   ├── app.js
+│   ├── config
+│   │   ├── db.js
+│   │   ├── email.config.js
+│   │   ├── env.config.js
+│   │   ├── logger.config.js
+│   │   └── payment.config.js
+│   ├── constant.js
+│   ├── controllers
+│   │   ├── auth.controller.js
+│   │   ├── blog.controller.js
+│   │   ├── booking.controller.js
+│   │   ├── email.controller.js
+│   │   ├── payment.controller.js
+│   │   └── product.controller.js
+│   ├── docs
+│   ├── middleware
+│   │   ├── auth.middleware.js
+│   │   ├── error.middleware.js
+│   │   ├── multer.middleware.js
+│   │   ├── role.middleware.js
+│   │   ├── upload.middleware.js
+│   │   └── validate.middleware.js
+│   ├── models
+│   │   ├── blog.model.js
+│   │   ├── booking.model.js
+│   │   ├── payment.model.js
+│   │   ├── product.model.js
+│   │   └── user.model.js
+│   ├── routes
+│   │   ├── auth.routes.js
+│   │   ├── blog.routes.js
+│   │   ├── booking.routes.js
+│   │   ├── email.routes.js
+│   │   ├── index.routes.js
+│   │   ├── payment.routes.js
+│   │   └── product.routes.js
+│   ├── scripts
+│   ├── server.js
+│   ├── services
+│   │   ├── auth.service.js
+│   │   ├── blog.service.js
+│   │   ├── booking.service.js
+│   │   ├── email.service.js
+│   │   ├── payment.service.js
+│   │   └── product.service.js
+│   ├── tests
+│   ├── uploads
+│   ├── utils
+│   │   ├── ApiError.js
+│   │   ├── ApiResponse.js
+│   │   ├── asyncHandler.js
+│   │   ├── cloudinary.js
+│   │   ├── email.utils.js
+│   │   ├── errorHandler.js
+│   │   ├── generateToken.js
+│   │   ├── logger.js
+│   │   ├── payment.utils.js
+│   │   ├── sendEmail.js
+│   │   └── validateInput.js
+│   ├── validations
+│   └── views
+│       └── emails
+│           └── resetPassword.html
+└── tree.js
