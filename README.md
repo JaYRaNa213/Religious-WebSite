@@ -1,17 +1,24 @@
-# Religious Website
+
+# 🖉️ Religious Website
 
 This repository contains the full-stack implementation of a **Religious Website**, which includes both **Frontend** and **Backend** components. 
 
-## Features
+## 🌟 **Features**
 
-- **User Authentication**: Register, Login, and Role-based Access Control.
-- **Booking System**: Users can book Pandits, Puja, and other services.
-- **Payment Integration**: Secure payment processing for religious products and services.
-- **Blogs and Articles**: Religious blogs and updates.
-- **Live Bhajan & Puja**: Users can participate in online religious activities.
-- **E-commerce Store**: Selling religious books, idols, and other items.
-- **Multi-language Support**: Users can choose their preferred language.
+1. 📚 **Selling Religious Books**
+2. 🔥 **Pandit Booking System**
+3. 🙏 **Online Pooja Completion**
+4. 🚰️ **Mathura Blogs & Religious Blogs**
+5. 🎥 **Aarti & Bhajan Streaming**
+6. 💳 **Secure Payment Gateway Integration**
+7. 📅 **Priest (Pandit) Appointments**
+8. 🌐 **Multiple Language Support**
+9. 🜡️ **Live Pooja Path & Bhajans**
+10. 🗉️ **Hindu Festival Products Store**
+11. 📞 **Contact Details & Customer Support**
+12. 💌 **Query & Feedback Section**
 
+---
 ## Project Structure
 
 ### 📂 Full Stack Project Directory Structure
