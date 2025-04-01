@@ -1,0 +1,71 @@
+📂 Religious Website Frontend Tree Structure
+
+├── .env
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── images
+│       └── logo.png
+├── README.md
+├── setupFrontend.mjs
+├── src
+│   ├── api
+│   │   ├── authAPI.js
+│   │   ├── blogAPI.js
+│   │   ├── bookingAPI.js
+│   │   ├── emailAPI.js
+│   │   ├── paymentAPI.js
+│   │   └── productAPI.js
+│   ├── App.js
+│   ├── assets
+│   │   ├── css
+│   │   │   └── styles.css
+│   │   └── js
+│   │       └── utils.js
+│   ├── components
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── Loader.jsx
+│   │   └── Navbar.jsx
+│   ├── config
+│   │   └── axiosConfig.js
+│   ├── context
+│   │   └── AuthContext.js
+│   ├── layouts
+│   │   ├── AdminLayout.jsx
+│   │   └── MainLayout.jsx
+│   ├── pages
+│   │   ├── About.jsx
+│   │   ├── auth
+│   │   │   ├── Login.jsx
+│   │   │   └── Register.jsx
+│   │   ├── blog
+│   │   │   └── BlogList.jsx
+│   │   ├── booking
+│   │   │   └── BookingForm.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Home.jsx
+│   │   ├── NotFound.jsx
+│   │   └── payments
+│   │       └── PaymentSuccess.jsx
+│   ├── routes
+│   │   └── AppRoutes.jsx
+│   ├── server.js
+│   ├── services
+│   │   ├── authService.js
+│   │   ├── blogService.js
+│   │   ├── bookingService.js
+│   │   ├── emailService.js
+│   │   ├── paymentService.js
+│   │   └── productService.js
+│   ├── store
+│   │   ├── actions.js
+│   │   └── reducers.js
+│   └── utils
+│       ├── apiErrorHandler.js
+│       ├── constants.js
+│       └── formValidation.js
+├── tree.js
+└── tree_Structure.txt
