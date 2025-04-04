@@ -196,3 +196,73 @@ button:disabled {
   padding: 1rem 0;
   width: 100%;
 }
+
+
+.about-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+
+.contact-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container ul {
+  padding-left: 20px;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+
+
+
+
+.not-found-container {
+  text-align: center;
+  padding: 100px 20px;
+  color: #444;
+}
+
+.not-found-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.go-home-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.go-home-btn:hover {
+  background-color: #45a049;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}

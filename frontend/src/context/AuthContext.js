@@ -1,25 +1,34 @@
 import React, { createContext, useState, useEffect } from 'react';
+import { fetchUserProfile } from '../services/authService'; // adjust path if needed
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // Check if the user is already logged in
+  // Load user from token
+  const loadUser = async () => {
+    try {
+      const userData = await fetchUserProfile();
+      setUser(userData);
+    } catch (err) {
+      console.error('Error loading user:', err);
+      logout();
+    }
+  };
+
   useEffect(() => {
-    const storedUser = localStorage.getItem('authUser');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      loadUser();
     }
   }, []);
 
-  // Login function
   const login = (userData) => {
     setUser(userData);
     localStorage.setItem('authUser', JSON.stringify(userData));
   };
 
-  // Logout function
   const logout = () => {
     setUser(null);
     localStorage.removeItem('authUser');
@@ -32,5 +41,3 @@ const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export { AuthContext, AuthProvider };

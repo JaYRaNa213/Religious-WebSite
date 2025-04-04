@@ -1,6 +1,3 @@
-// booking/BookingForm.jsx
-// booking/BookingForm.jsx
-
 import React, { useState } from 'react';
 import axiosInstance from '../../config/axiosConfig';
 import MainLayout from '../../layouts/MainLayout';
@@ -8,6 +5,8 @@ import MainLayout from '../../layouts/MainLayout';
 const BookingForm = () => {
   const [formData, setFormData] = useState({ name: '', date: '', poojaType: '' });
   const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,12 +14,19 @@ const BookingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setSuccessMessage('');
+    setErrorMessage('');
+
     try {
       await axiosInstance.post('/bookings', formData);
       setSuccessMessage('🙏 Booking successful! May God bless you!');
-      setFormData({ name: '', date: '', poojaType: '' }); // Clear form after booking
+      setFormData({ name: '', date: '', poojaType: '' });
     } catch (error) {
-      alert('❌ Error booking. Try again.');
+      console.error(error);
+      setErrorMessage('❌ Error booking. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -28,7 +34,10 @@ const BookingForm = () => {
     <MainLayout>
       <div className="booking-container">
         <h1>📿 Book Your Pooja</h1>
+
         {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -50,8 +59,12 @@ const BookingForm = () => {
             <option value="Ganesh Pooja">Ganesh Pooja</option>
             <option value="Lakshmi Pooja">Lakshmi Pooja</option>
             <option value="Sundar Kand">Sundar Kand</option>
+            <option value="Satyanarayan Katha">Satyanarayan Katha</option>
+            <option value="Rudrabhishek">Rudrabhishek</option>
           </select>
-          <button type="submit">📅 Book Now</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Booking...' : '📅 Book Now'}
+          </button>
         </form>
       </div>
     </MainLayout>
