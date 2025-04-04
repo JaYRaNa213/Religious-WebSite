@@ -2,6 +2,8 @@
 
 ├── .env
 ├── .gitignore
+├── frontend_tree.txt
+├── next.config.js
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -25,6 +27,7 @@
 │   │   └── js
 │   │       └── utils.js
 │   ├── components
+│   │   ├── ContactForm.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Header.jsx
 │   │   ├── Loader.jsx
@@ -47,9 +50,11 @@
 │   │   │   └── BookingForm.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Home.jsx
+│   │   ├── index.jsx
 │   │   ├── NotFound.jsx
-│   │   └── payments
-│   │       └── PaymentSuccess.jsx
+│   │   ├── payments
+│   │   │   └── PaymentSuccess.jsx
+│   │   └── _app.js
 │   ├── routes
 │   │   └── AppRoutes.jsx
 │   ├── server.js
