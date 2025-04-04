@@ -1,3 +1,6 @@
+// File: frontend/src/components/Loader.jsx
+// Loader.jsx
+
 import React from 'react';
 import '../assets/css/styles.css';
 

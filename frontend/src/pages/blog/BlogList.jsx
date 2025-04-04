@@ -1,3 +1,5 @@
+// blog/BlogList.jsx
+
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../../config/axiosConfig';
 import MainLayout from '../../layouts/MainLayout';

@@ -1,3 +1,6 @@
+
+// path: frontend/src/pages/auth/Register.jsx
+
 import React, { useState } from 'react';
 import axiosInstance from '../../config/axiosConfig';
 import { useNavigate } from 'react-router-dom';
