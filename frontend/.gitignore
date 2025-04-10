@@ -9,6 +9,7 @@ coverage/
 
 # Environment and sensitive files
 .env
+.env
 .env.local
 .env.development.local
 .env.production.local
