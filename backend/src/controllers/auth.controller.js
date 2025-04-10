@@ -3,7 +3,7 @@ import { registerUser, loginUser, logoutUser } from '../services/auth.service.js
 import { getAllUsers } from '../services/auth.service.js';
 
 
-// Register user controller
+// Register 
 export const register = async (req, res) => {
   try {
     const user = await registerUser(req.body);
