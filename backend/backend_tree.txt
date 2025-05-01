@@ -1,78 +1,78 @@
-📂 Backend directory Structure
+📂 Project Directory Tree
 
-├── .env
-├── .gitignore
-├── .prettierignore
-├── .prettierrc
-├── package-lock.json
-├── package.json
-├── public
-│   └── temp
-│       └── token.js
-├── README.md
-├── src
-│   ├── app.js
-│   ├── config
-│   │   ├── db.js
-│   │   ├── email.config.js
-│   │   ├── env.config.js
-│   │   ├── logger.config.js
-│   │   └── payment.config.js
-│   ├── constant.js
-│   ├── controllers
-│   │   ├── auth.controller.js
-│   │   ├── blog.controller.js
-│   │   ├── booking.controller.js
-│   │   ├── email.controller.js
-│   │   ├── payment.controller.js
-│   │   └── product.controller.js
-│   ├── docs
-│   ├── middleware
-│   │   ├── auth.middleware.js
-│   │   ├── error.middleware.js
-│   │   ├── multer.middleware.js
-│   │   ├── role.middleware.js
-│   │   ├── upload.middleware.js
-│   │   └── validate.middleware.js
-│   ├── models
-│   │   ├── blog.model.js
-│   │   ├── booking.model.js
-│   │   ├── payment.model.js
-│   │   ├── product.model.js
-│   │   └── user.model.js
-│   ├── routes
-│   │   ├── auth.routes.js
-│   │   ├── blog.routes.js
-│   │   ├── booking.routes.js
-│   │   ├── email.routes.js
-│   │   ├── index.routes.js
-│   │   ├── payment.routes.js
-│   │   └── product.routes.js
-│   ├── scripts
-│   ├── server.js
-│   ├── services
-│   │   ├── auth.service.js
-│   │   ├── blog.service.js
-│   │   ├── booking.service.js
-│   │   ├── email.service.js
-│   │   ├── payment.service.js
-│   │   └── product.service.js
-│   ├── tests
-│   ├── uploads
-│   ├── utils
-│   │   ├── ApiError.js
-│   │   ├── ApiResponse.js
-│   │   ├── asyncHandler.js
-│   │   ├── cloudinary.js
-│   │   ├── email.utils.js
-│   │   ├── errorHandler.js
-│   │   ├── generateToken.js
-│   │   ├── logger.js
-│   │   ├── payment.utils.js
-│   │   ├── sendEmail.js
-│   │   └── validateInput.js
-│   ├── validations
-│   └── views
+├── .env                          # Environment variables
+├── .gitignore                   # Git ignore configuration
+├── .prettierignore              # Prettier ignore configuration
+├── .prettierrc                  # Prettier configuration
+├── package-lock.json            # Package lock file
+├── package.json                 # Project dependencies and scripts
+├── public                       # Public static files
+│   └── temp                     # Temporary folder
+│       └── token.js             # Temporary token storage
+├── README.md                    # Project documentation
+├── src                          # Source code root
+│   ├── app.js                   # Application entry point
+│   ├── config                   # App configuration files
+│   │   ├── db.js                # Database configuration
+│   │   ├── email.config.js      # Email service configuration
+│   │   ├── env.config.js        # Environment variables setup
+│   │   ├── logger.config.js     # Logger configuration
+│   │   └── payment.config.js    # Payment integration config
+│   ├── constant.js              # Application-wide constants
+│   ├── controllers              # Controller logic
+│   │   ├── auth.controller.js   # Authentication logic
+│   │   ├── blog.controller.js   # Blog handling logic
+│   │   ├── booking.controller.js# Booking functionality
+│   │   ├── email.controller.js  # Email-related logic
+│   │   ├── payment.controller.js# Payment operations
+│   │   └── product.controller.js# Product operations
+│   ├── docs                     # API documentation
+│   ├── middleware               # Middleware for request handling
+│   │   ├── auth.middleware.js   # Authentication checks
+│   │   ├── error.middleware.js  # Global error handling
+│   │   ├── multer.middleware.js # File upload handling
+│   │   ├── role.middleware.js   # Role-based access control
+│   │   ├── upload.middleware.js # Upload processing
+│   │   └── validate.middleware.js# Input validation
+│   ├── models                   # Database models
+│   │   ├── blog.model.js        # Blog schema and model
+│   │   ├── booking.model.js     # Booking schema and model
+│   │   ├── payment.model.js     # Payment schema and model
+│   │   ├── product.model.js     # Product schema and model
+│   │   └── user.model.js        # User schema and model
+│   ├── routes                   # Route definitions
+│   │   ├── auth.routes.js       # Authentication routes
+│   │   ├── blog.routes.js       # Blog routes
+│   │   ├── booking.routes.js    # Booking routes
+│   │   ├── email.routes.js      # Email routes
+│   │   ├── index.routes.js      # Combined index routes
+│   │   ├── payment.routes.js    # Payment routes
+│   │   └── product.routes.js    # Product routes
+│   ├── scripts                  # Custom scripts or tools
+│   ├── server.js                # Server startup file
+│   ├── services                 # Business logic layer
+│   │   ├── auth.service.js      # Auth services
+│   │   ├── blog.service.js      # Blog services
+│   │   ├── booking.service.js   # Booking services
+│   │   ├── email.service.js     # Email services
+│   │   ├── payment.service.js   # Payment services
+│   │   └── product.service.js   # Product services
+│   ├── tests                   # Test cases
+│   ├── uploads                 # Uploaded assets
+│   ├── utils                   # Utility functions
+│   │   ├── ApiError.js          # Custom error class
+│   │   ├── ApiResponse.js       # Standard API responses
+│   │   ├── asyncHandler.js      # Async error handler wrapper
+│   │   ├── cloudinary.js        # Cloudinary integration
+│   │   ├── email.utils.js       # Email utility functions
+│   │   ├── errorHandler.js      # Error handler logic
+│   │   ├── generateToken.js     # Token generation logic
+│   │   ├── logger.js            # Logger utility
+│   │   ├── payment.utils.js     # Payment helper functions
+│   │   ├── sendEmail.js         # Email sender utility
+│   │   └── validateInput.js     # Input validation logic
+│   ├── validations              # Input validation schemas
+│   └── views                    # Email views/templates
 │       └── emails
-│           └── resetPassword.html
-└── tree.js
+│           └── resetPassword.html # Reset password email template
+└── tree.js                      # Tree visual generator
