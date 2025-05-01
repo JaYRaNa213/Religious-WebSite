@@ -1,80 +1,79 @@
 
-
 📂 Backend Directory Tree
 
-├── .env                                # Environment variables
-├── .gitignore                          # Git ignore configuration
-├── .prettierignore                     # Prettier ignore configuration
-├── .prettierrc                         # Prettier configuration
-├── package-lock.json                   # Package lock file
-├── package.json                        # Project dependencies and scripts
-├── public                              # Public static files
-│   └── temp                            # Temporary folder
-│       └── token.js                    # Temporary token storage
-├── README.md                           # Project documentation
-├── src                                 # Source code root
-│   ├── app.js                          # Application entry point
-│   ├── config                          # App configuration files
-│   │   ├── db.js                       # Database configuration
-│   │   ├── email.config.js             # Email service configuration
-│   │   ├── env.config.js               # Environment variables setup
-│   │   ├── logger.config.js            # Logger configuration
-│   │   └── payment.config.js           # Payment integration config
-│   ├── constant.js                     # Application-wide constants
-│   ├── controllers                     # Controller logic
-│   │   ├── auth.controller.js          # Authentication logic
-│   │   ├── blog.controller.js          # Blog handling logic
-│   │   ├── booking.controller.js       # Booking functionality
-│   │   ├── email.controller.js         # Email-related logic
-│   │   ├── payment.controller.js       # Payment operations
-│   │   └── product.controller.js       # Product operations
-│   ├── docs                            # API documentation
-│   ├── middleware                      # Middleware for request handling
-│   │   ├── auth.middleware.js          # Authentication checks
-│   │   ├── error.middleware.js         # Global error handling
-│   │   ├── multer.middleware.js        # File upload handling
-│   │   ├── role.middleware.js          # Role-based access control
-│   │   ├── upload.middleware.js        # Upload processing
-│   │   └── validate.middleware.js      # Input validation
-│   ├── models                          # Database models
-│   │   ├── blog.model.js               # Blog schema and model
-│   │   ├── booking.model.js            # Booking schema and model
-│   │   ├── payment.model.js            # Payment schema and model
-│   │   ├── product.model.js            # Product schema and model
-│   │   └── user.model.js               # User schema and model
-│   ├── routes                          # Route definitions
-│   │   ├── auth.routes.js              # Authentication routes
-│   │   ├── blog.routes.js              # Blog routes
-│   │   ├── booking.routes.js           # Booking routes
-│   │   ├── email.routes.js             # Email routes
-│   │   ├── index.routes.js             # Combined index routes
-│   │   ├── payment.routes.js           # Payment routes
-│   │   └── product.routes.js           # Product routes
-│   ├── scripts                         # Custom scripts or tools
-│   ├── server.js                       # Server startup file
-│   ├── services                        # Business logic layer
-│   │   ├── auth.service.js             # Auth services
-│   │   ├── blog.service.js             # Blog services
-│   │   ├── booking.service.js          # Booking services
-│   │   ├── email.service.js            # Email services
-│   │   ├── payment.service.js          # Payment services
-│   │   └── product.service.js          # Product services
-│   ├── tests                           # Test cases
-│   ├── uploads                         # Uploaded assets
-│   ├── utils                           # Utility functions
-│   │   ├── ApiError.js                 # Custom error class
-│   │   ├── ApiResponse.js              # Standard API responses
-│   │   ├── asyncHandler.js             # Async error handler wrapper
-│   │   ├── cloudinary.js               # Cloudinary integration
-│   │   ├── email.utils.js              # Email utility functions
-│   │   ├── errorHandler.js             # Error handler logic
-│   │   ├── generateToken.js            # Token generation logic
-│   │   ├── logger.js                   # Logger utility
-│   │   ├── payment.utils.js            # Payment helper functions
-│   │   ├── sendEmail.js                # Email sender utility
-│   │   └── validateInput.js            # Input validation logic
-│   ├── validations                     # Input validation schemas
-│   └── views                           # Email views/templates
+├── .env                                # Stores environment-specific configuration variables
+├── .gitignore                          # Specifies untracked files Git should ignore
+├── .prettierignore                     # Files and folders to ignore during code formatting
+├── .prettierrc                         # Configuration settings for Prettier code formatter
+├── package-lock.json                   # Auto-generated file for locking package versions
+├── package.json                        # Project metadata, scripts, and dependency definitions
+├── public                              # Static files accessible publicly (e.g. assets)
+│   └── temp                            # Temporary files for session or dev use
+│       └── token.js                    # Stores temporary JWT or token during processes
+├── README.md                           # Overview and instructions for setting up the project
+├── src                                 # Main application source code directory
+│   ├── app.js                          # Initializes and configures Express application
+│   ├── config                          # All service and environment-related configurations
+│   │   ├── db.js                       # MongoDB or database connection logic
+│   │   ├── email.config.js             # SMTP or third-party email service setup
+│   │   ├── env.config.js               # Loads and validates environment variables
+│   │   ├── logger.config.js            # Setup for logging system and log levels
+│   │   └── payment.config.js           # Configuration for payment gateway integrations
+│   ├── constant.js                     # Central location for fixed values and enums
+│   ├── controllers                     # Request handler functions for each route
+│   │   ├── auth.controller.js          # Handles login, signup, and authentication flows
+│   │   ├── blog.controller.js          # Manages blog creation, editing, and deletion
+│   │   ├── booking.controller.js       # Handles user bookings, availability, and flow
+│   │   ├── email.controller.js         # Sends and verifies emails, OTPs, and notifications
+│   │   ├── payment.controller.js       # Handles transactions, orders, and callbacks
+│   │   └── product.controller.js       # Manages product listings, updates, and removal
+│   ├── docs                            # Swagger or markdown API documentation files
+│   ├── middleware                      # Functions that run before route handlers
+│   │   ├── auth.middleware.js          # Verifies if the user is authenticated via token
+│   │   ├── error.middleware.js         # Captures and formats errors across the app
+│   │   ├── multer.middleware.js        # Handles file uploads using Multer
+│   │   ├── role.middleware.js          # Grants/denies access based on user roles
+│   │   ├── upload.middleware.js        # File storage setup and validations
+│   │   └── validate.middleware.js      # Validates incoming request data structure
+│   ├── models                          # Mongoose schemas and database models
+│   │   ├── blog.model.js               # Structure for blog posts in the database
+│   │   ├── booking.model.js            # Booking schema with user and slot reference
+│   │   ├── payment.model.js            # Schema for storing payment and transaction data
+│   │   ├── product.model.js            # Schema for religious products in store
+│   │   └── user.model.js               # User data structure including roles and auth
+│   ├── routes                          # Defines API endpoints for each module
+│   │   ├── auth.routes.js              # Authentication-related API endpoints
+│   │   ├── blog.routes.js              # CRUD routes for blog content
+│   │   ├── booking.routes.js           # Endpoints to manage puja/slot bookings
+│   │   ├── email.routes.js             # Routes for sending or verifying email
+│   │   ├── index.routes.js             # Combines and exports all route modules
+│   │   ├── payment.routes.js           # Routes to initiate and verify payments
+│   │   └── product.routes.js           # Endpoints to manage product catalog
+│   ├── scripts                         # One-time setup or utility scripts (optional)
+│   ├── server.js                       # Entry file to start the Node.js/Express server
+│   ├── services                        # Business logic used by controllers
+│   │   ├── auth.service.js             # Auth operations like token generation
+│   │   ├── blog.service.js             # Blog logic like formatting, filtering, etc.
+│   │   ├── booking.service.js          # Business logic for managing bookings
+│   │   ├── email.service.js            # Email logic and API integration (like nodemailer)
+│   │   ├── payment.service.js          # Payment-related functions and gateway calls
+│   │   └── product.service.js          # Logic for searching, sorting, or managing products
+│   ├── tests                           # Unit and integration test cases
+│   ├── uploads                         # Stores uploaded images or documents
+│   ├── utils                           # Helper functions used across modules
+│   │   ├── ApiError.js                 # Custom class to standardize error handling
+│   │   ├── ApiResponse.js              # Wrapper for structured JSON responses
+│   │   ├── asyncHandler.js             # Catches async errors in route handlers
+│   │   ├── cloudinary.js               # Cloudinary SDK setup for media uploads
+│   │   ├── email.utils.js              # Helper methods for composing email messages
+│   │   ├── errorHandler.js             # Common logic for handling exceptions
+│   │   ├── generateToken.js            # Generates JWTs for authentication
+│   │   ├── logger.js                   # Logging utility for debugging or production
+│   │   ├── payment.utils.js            # Utilities for formatting or verifying payment data
+│   │   ├── sendEmail.js                # Sends email through configured service
+│   │   └── validateInput.js            # Validates data against schemas before processing
+│   ├── validations                     # Request validation schemas using Joi or similar
+│   └── views                           # Dynamic or HTML views for emails or frontend
 │       └── emails
-│           └── resetPassword.html     # Reset password email template
-└── tree.js                             # Tree visual generator
+│           └── resetPassword.html     # HTML template for reset password email
+└── tree.js                             # Script to auto-generate this project structure
