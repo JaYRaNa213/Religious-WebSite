@@ -1,5 +1,5 @@
 
-📂 Religious Website Frontend Tree Structure
+📂 Frontend Tree Structure (Template for frontend)
 
 ├── .env                          # Environment variables for frontend configuration
 ├── .gitignore                    # Specifies files/folders to be ignored by Git
