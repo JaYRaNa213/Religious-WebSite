@@ -1,76 +1,77 @@
+
 📂 Religious Website Frontend Tree Structure
 
-├── .env
-├── .gitignore
-├── frontend_tree.txt
-├── next.config.js
-├── package-lock.json
-├── package.json
-├── public
-│   ├── favicon.ico
-│   └── images
-│       └── logo.png
-├── README.md
-├── setupFrontend.mjs
-├── src
-│   ├── api
-│   │   ├── authAPI.js
-│   │   ├── blogAPI.js
-│   │   ├── bookingAPI.js
-│   │   ├── emailAPI.js
-│   │   ├── paymentAPI.js
-│   │   └── productAPI.js
-│   ├── App.js
-│   ├── assets
-│   │   ├── css
-│   │   │   └── styles.css
-│   │   └── js
-│   │       └── utils.js
-│   ├── components
-│   │   ├── ContactForm.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── Loader.jsx
-│   │   └── Navbar.jsx
-│   ├── config
-│   │   └── axiosConfig.js
-│   ├── context
-│   │   └── AuthContext.js
-│   ├── layouts
-│   │   ├── AdminLayout.jsx
-│   │   └── MainLayout.jsx
-│   ├── pages
-│   │   ├── About.jsx
-│   │   ├── auth
-│   │   │   ├── Login.jsx
-│   │   │   └── Register.jsx
-│   │   ├── blog
-│   │   │   └── BlogList.jsx
-│   │   ├── booking
-│   │   │   └── BookingForm.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Home.jsx
-│   │   ├── index.jsx
-│   │   ├── NotFound.jsx
-│   │   ├── payments
-│   │   │   └── PaymentSuccess.jsx
-│   │   └── _app.js
-│   ├── routes
-│   │   └── AppRoutes.jsx
-│   ├── server.js
-│   ├── services
-│   │   ├── authService.js
-│   │   ├── blogService.js
-│   │   ├── bookingService.js
-│   │   ├── emailService.js
-│   │   ├── paymentService.js
-│   │   └── productService.js
-│   ├── store
-│   │   ├── actions.js
-│   │   └── reducers.js
-│   └── utils
-│       ├── apiErrorHandler.js
-│       ├── constants.js
-│       └── formValidation.js
-├── tree.js
-└── tree_Structure.txt
+├── .env                          # Environment variables for frontend configuration
+├── .gitignore                    # Specifies files/folders to be ignored by Git
+├── frontend_tree.txt             # Text file representing frontend folder structure
+├── next.config.js                # Next.js framework configuration file
+├── package-lock.json             # Auto-generated dependency lock file
+├── package.json                  # Project metadata and frontend dependencies
+├── public                        # Publicly accessible static assets
+│   ├── favicon.ico               # Browser tab icon
+│   └── images                    # Static images folder
+│       └── logo.png              # Website logo image
+├── README.md                     # Frontend project documentation
+├── setupFrontend.mjs             # Script to initialize or setup the frontend
+├── src                           # Source code directory for the app
+│   ├── api                       # API integration layer for backend communication
+│   │   ├── authAPI.js            # API calls for authentication
+│   │   ├── blogAPI.js            # API endpoints for blog operations
+│   │   ├── bookingAPI.js         # API methods related to bookings
+│   │   ├── emailAPI.js           # Email service API interactions
+│   │   ├── paymentAPI.js         # Handles payment-related API calls
+│   │   └── productAPI.js         # API functions for products
+│   ├── App.js                    # Root React component and app entry point
+│   ├── assets                    # Stylesheets and scripts for UI/UX
+│   │   ├── css                   # Custom CSS files
+│   │   │   └── styles.css        # Main stylesheet for the application
+│   │   └── js                    # JavaScript utilities
+│   │       └── utils.js          # Shared utility functions
+│   ├── components                # Reusable UI components
+│   │   ├── ContactForm.jsx       # Component for contact form UI
+│   │   ├── Footer.jsx            # Footer section of the website
+│   │   ├── Header.jsx            # Header section of the site
+│   │   ├── Loader.jsx            # Loading spinner component
+│   │   └── Navbar.jsx            # Top navigation bar component
+│   ├── config                    # Configuration files
+│   │   └── axiosConfig.js        # Axios setup for HTTP requests
+│   ├── context                   # Global state/context using React Context API
+│   │   └── AuthContext.js        # Context for user authentication state
+│   ├── layouts                   # Common layout wrappers for pages
+│   │   ├── AdminLayout.jsx       # Layout for admin panel pages
+│   │   └── MainLayout.jsx        # Main layout for regular user-facing pages
+│   ├── pages                     # Page-level React components
+│   │   ├── About.jsx             # About page
+│   │   ├── auth                  # Authentication-related pages
+│   │   │   ├── Login.jsx         # Login screen
+│   │   │   └── Register.jsx      # User registration screen
+│   │   ├── blog                  # Blog section components
+│   │   │   └── BlogList.jsx      # Component to list blog posts
+│   │   ├── booking               # Booking process screens
+│   │   │   └── BookingForm.jsx   # Form for booking services
+│   │   ├── Contact.jsx           # Contact page UI
+│   │   ├── Home.jsx              # Home page UI
+│   │   ├── index.jsx             # Default route landing page
+│   │   ├── NotFound.jsx          # 404 - Page not found component
+│   │   ├── payments              # Payment-related components
+│   │   │   └──PaymentSuccess.jsx # Confirmation page after successful payment
+│   │   └── _app.js               # Global app configuration for Next.js
+│   ├── routes                    # Centralized route configurations
+│   │   └── AppRoutes.jsx         # Application routes definition
+│   ├── server.js                 # Express server setup (if SSR or proxy used)
+│   ├── services                  # Business logic abstraction layer
+│   │   ├── authService.js        # Authentication service logic
+│   │   ├── blogService.js        # Blog service operations
+│   │   ├── bookingService.js     # Booking functionality logic
+│   │   ├── emailService.js       # Email handler logic
+│   │   ├── paymentService.js     # Payment processing logic
+│   │   └── productService.js     # Product data and interaction logic
+│   ├── store                     # State management (possibly Redux or Context)
+│   │   ├── actions.js            # Global action creators
+│   │   └── reducers.js           # Reducers to update state
+│   └── utils                     # Shared utility functions
+│       ├── apiErrorHandler.js    # Handles errors from API responses
+│       ├── constants.js          # Common constants used throughout the app
+│       └── formValidation.js     # Functions to validate form inputs
+├── tree.js                       # Script to generate project structure
+└── tree_Structure.txt            # File containing project tree information
