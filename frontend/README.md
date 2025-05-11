@@ -1,6 +1,6 @@
 
 # 🌸 Religious Website Frontend 🌸
-<<<<<<< HEAD
+
 
 This is the **frontend** for a full-featured Hindu Religious Web Application, built using **React.js (Vite)** and styled with **Tailwind CSS**. It offers a rich user and admin experience for booking poojas, buying religious products, reading blogs, watching live bhajans, and more.
 
@@ -44,7 +44,7 @@ This is the **frontend** for a full-featured Hindu Religious Web Application, bu
 ## 🚀 Getting Started Locally
 
 ### 1. 📦 Install Dependencies
-=======
+======
 This is the **frontend** for the Religious Website, built using modern web technologies such as **React.js / Next.js**. The platform provides a seamless and responsive user experience with dynamic content, user authentication, and multiple functionalities, including **Pooja booking, religious product sales, blogs, and more**.
 
 ---
@@ -82,25 +82,17 @@ npm install
 ```
 
 ### 2. 🖥️ Start Development Server
-<<<<<<< HEAD
-=======
-To start the local development server:
->>>>>>> 3893ef26be9d5a6bc3231cc3d58acb59786475dd
+
 ```bash
 npm run dev
 ```
 
-<<<<<<< HEAD
+
 ### 3. 🌐 Open in Browser
+
 ```
-http://localhost:5173
-=======
-### 3. 🌐 Open Browser
-Visit the following URL in your browser:
-```
-http://localhost:3000
->>>>>>> 3893ef26be9d5a6bc3231cc3d58acb59786475dd
-```
+http://localhost:xxxx
+
 
 ---
 
@@ -177,118 +169,17 @@ http://localhost:3000
 ├── vite.config.js
 ├── postcss.config.js
 └── README.md
-=======
-## 🔥 Directory Structure
-Here’s an overview of the **frontend folder structure:**
+=
 
-```
-📂 RELIGIOUS_WEB
-└── 📂 frontend
-    ├── 📂 public
-    │   ├── favicon.ico
-    │   └── images
-    │       └── logo.png
-    ├── 📂 src
-    │   ├── 📂 api
-    │   │   ├── authAPI.js
-    │   │   ├── blogAPI.js
-    │   │   ├── bookingAPI.js
-    │   │   ├── emailAPI.js
-    │   │   ├── paymentAPI.js
-    │   │   └── productAPI.js
-    │   ├── 📂 assets
-    │   │   ├── 📂 css
-    │   │   │   └── styles.css
-    │   │   └── 📂 js
-    │   │       └── utils.js
-    │   ├── 📂 components
-    │   │   ├── Footer.jsx
-    │   │   ├── Header.jsx
-    │   │   ├── Loader.jsx
-    │   │   └── Navbar.jsx
-    │   ├── 📂 config
-    │   │   └── axiosConfig.js
-    │   ├── 📂 context
-    │   │   └── AuthContext.js
-    │   ├── 📂 hooks
-    │   │   └── useAuth.js
-    │   ├── 📂 layouts
-    │   │   ├── AdminLayout.jsx
-    │   │   └── MainLayout.jsx
-    │   ├── 📂 pages
-    │   │   ├── 📂 auth
-    │   │   │   ├── Login.jsx
-    │   │   │   └── Register.jsx
-    │   │   ├── 📂 blog
-    │   │   │   └── BlogList.jsx
-    │   │   ├── 📂 booking
-    │   │   │   └── BookingForm.jsx
-    │   │   ├── 📂 payments
-    │   │   │   └── PaymentSuccess.jsx
-    │   │   ├── About.jsx
-    │   │   ├── Contact.jsx
-    │   │   ├── Home.jsx
-    │   │   └── NotFound.jsx
-    │   ├── 📂 routes
-    │   │   └── AppRoutes.jsx
-    │   ├── 📂 services
-    │   │   ├── authService.js
-    │   │   ├── blogService.js
-    │   │   ├── bookingService.js
-    │   │   ├── emailService.js
-    │   │   ├── paymentService.js
-    │   │   └── productService.js
-    │   ├── 📂 store
-    │   │   ├── actions.js
-    │   │   └── reducers.js
-    │   ├── 📂 utils
-    │   │   ├── apiErrorHandler.js
-    │   │   ├── constants.js
-    │   │   └── formValidation.js
-    │   ├── App.js
-    │   └── server.js
-    ├── 📂 .vscode
-    │   └── settings.json
-    ├── .env
-    ├── .gitignore
-    ├── package.json
-    ├── README.md
-    └── tree.js
->>>>>>> 3893ef26be9d5a6bc3231cc3d58acb59786475dd
-```
 
----
-
-<<<<<<< HEAD
 ## 🔐 Environment Variables
 
 Create a `.env` file in the project root:
 
 ```env
-VITE_BACKEND_URL=http://localhost:7000/api
+VITE_BACKEND_URL=http://localhost:xxxx/api
 VITE_GOOGLE_API_KEY=your-google-api-key
-=======
-## ⚙️ Environment Variables
-Create a `.env` file in the **root directory** and include the following variables:
-
 ```
-# Backend API URL
-REACT_APP_BACKEND_URL=http://localhost:7000/api
-
-# Port where frontend runs
-PORT=3000
-
-# Node environment (development/production)
-NODE_ENV=development
-
-# Google API key (if needed for maps or reCAPTCHA)
-REACT_APP_GOOGLE_API_KEY=your-google-api-key
-
-# JWT Secret (for user token if needed)
-REACT_APP_JWT_SECRET=your-jwt-secret
->>>>>>> 3893ef26be9d5a6bc3231cc3d58acb59786475dd
-```
-
 ---
 
 <<<<<<< HEAD
