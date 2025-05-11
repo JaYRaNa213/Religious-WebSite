@@ -180,26 +180,6 @@ Create a `.env` file in the project root:
 VITE_BACKEND_URL=http://localhost:xxxx/api
 VITE_GOOGLE_API_KEY=your-google-api-key
 ```
----
-
-<<<<<<< HEAD
-## 🧭 Routing Overview
-
-| Path | Component | Access |
-|------|-----------|--------|
-| `/` | Home | Public |
-| `/login` | Login | Public |
-| `/register` | Register | Public |
-| `/products` | Product List | User |
-| `/cart` | Cart | User |
-| `/puja-booking` | Book Pooja | User |
-| `/blog` | Blogs | Public |
-| `/profile` | User Profile | Authenticated |
-| `/admin` | Admin Dashboard | Admin |
-| `/admin/add-product` | Add Product | Admin |
-| `/admin/add-blog` | Add Blog | Admin |
-
----
 
 ## 🛠️ Build for Production
 
