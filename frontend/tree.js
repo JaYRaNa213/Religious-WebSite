@@ -52,3 +52,7 @@ console.log('\n✅ Tree generation complete!');
 // Save the output to the file
 fs.writeFileSync(OUTPUT_FILE, treeOutput);
 console.log(`\n📄 Tree saved to ${OUTPUT_FILE}`);
+
+
+
+

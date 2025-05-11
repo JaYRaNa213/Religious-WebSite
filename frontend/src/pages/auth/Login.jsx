@@ -1,88 +1,51 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
-import axiosInstance from '../../config/axiosConfig';
-import apiErrorHandler from '../../utils/apiErrorHandler';
+import { useState } from "react";
+import { login } from "../../services/api";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
-const Login = () => {
-  const [formData, setFormData] = useState({ email: '', password: '' });
-  const [showPassword, setShowPassword] = useState(false);
-  const { login } = useContext(AuthContext);
+export default function Login() {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const { setUser } = useAuth();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrorMsg('');
-  };
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.email || !formData.password) {
-      setErrorMsg('Please fill in both email and password.');
-      return;
-    }
-
-    setLoading(true);
     try {
-      const response = await axiosInstance.post('/auth/login', formData);
-      login(response.data.user);
-      localStorage.setItem('authToken', response.data.token);
-      navigate('/dashboard');
-    } catch (error) {
-      const errorMessage = apiErrorHandler(error);
-      setErrorMsg(errorMessage);
-    } finally {
-      setLoading(false);
+      const res = await login(form);
+      localStorage.setItem("token", res.data.token);
+      setUser(res.data.user);
+      navigate("/dashboard");
+    } catch (err) {
+      alert("Login failed.");
+      console.error(err);
     }
   };
 
   return (
-    <div className="auth-container">
-      <h2>Login</h2>
-      {errorMsg && <p className="error-message">{errorMsg}</p>}
-      <form onSubmit={handleSubmit}>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-
-        <label>
-          Password:
-          <input
-            type={showPassword ? 'text' : 'password'}
-            name="password"
-            placeholder="Enter your password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </label>
-
-        <div>
-          <input
-            type="checkbox"
-            id="showPassword"
-            checked={showPassword}
-            onChange={() => setShowPassword(!showPassword)}
-          />
-          <label htmlFor="showPassword">Show Password</label>
-        </div>
-
-        <button type="submit" disabled={loading}>
-          {loading ? 'Logging in...' : 'Login'}
+    <div className="p-6 max-w-md mx-auto">
+      <h2 className="text-xl font-bold mb-4">Login</h2>
+      <form className="space-y-4" onSubmit={handleSubmit}>
+        <input
+          name="email"
+          type="email"
+          placeholder="Email"
+          className="w-full p-2 border rounded"
+          onChange={handleChange}
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="Password"
+          className="w-full p-2 border rounded"
+          onChange={handleChange}
+        />
+        <button className="bg-blue-600 text-white px-4 py-2 rounded">
+          Login
         </button>
       </form>
     </div>
   );
-};
-
-export default Login;
+}

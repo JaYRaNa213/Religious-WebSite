@@ -2,75 +2,75 @@
 
 ├── .env
 ├── .gitignore
+├── eslint.config.js
 ├── frontend_tree.txt
-├── next.config.js
+├── index.html
 ├── package-lock.json
 ├── package.json
+├── postcss.config.js
 ├── public
-│   ├── favicon.ico
-│   └── images
-│       └── logo.png
+│   └── vite.svg
 ├── README.md
-├── setupFrontend.mjs
 ├── src
-│   ├── api
-│   │   ├── authAPI.js
-│   │   ├── blogAPI.js
-│   │   ├── bookingAPI.js
-│   │   ├── emailAPI.js
-│   │   ├── paymentAPI.js
-│   │   └── productAPI.js
-│   ├── App.js
+│   ├── App.css
+│   ├── App.jsx
 │   ├── assets
-│   │   ├── css
-│   │   │   └── styles.css
-│   │   └── js
-│   │       └── utils.js
+│   │   └── react.svg
 │   ├── components
-│   │   ├── ContactForm.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── Loader.jsx
-│   │   └── Navbar.jsx
-│   ├── config
-│   │   └── axiosConfig.js
+│   │   ├── common
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   └── shared
+│   │       └── Button.jsx
+│   ├── constants
+│   │   ├── apiRoutes.js
+│   │   ├── appLabels.js
+│   │   └── userRoles.js
 │   ├── context
-│   │   └── AuthContext.js
+│   │   └── AuthContext.jsx
+│   ├── hooks
+│   │   ├── useAuth.js
+│   │   └── useCart.js
+│   ├── index.css
 │   ├── layouts
 │   │   ├── AdminLayout.jsx
-│   │   └── MainLayout.jsx
+│   │   └── UserLayout.jsx
+│   ├── main.jsx
 │   ├── pages
-│   │   ├── About.jsx
+│   │   ├── admin
+│   │   │   ├── AddBlogPost.jsx
+│   │   │   ├── AddLiveVideo.jsx
+│   │   │   ├── AddProduct.jsx
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   └── ManageProducts.jsx
 │   │   ├── auth
 │   │   │   ├── Login.jsx
 │   │   │   └── Register.jsx
-│   │   ├── blog
-│   │   │   └── BlogList.jsx
-│   │   ├── booking
-│   │   │   └── BookingForm.jsx
 │   │   ├── Contact.jsx
-│   │   ├── Home.jsx
-│   │   ├── index.jsx
 │   │   ├── NotFound.jsx
-│   │   ├── payments
-│   │   │   └── PaymentSuccess.jsx
-│   │   └── _app.js
+│   │   └── user
+│   │       ├── Blog.jsx
+│   │       ├── Booking.jsx
+│   │       ├── Cart.jsx
+│   │       ├── Home.jsx
+│   │       ├── Products.jsx
+│   │       ├── PujaBooking.jsx
+│   │       └── UserProfile.jsx
 │   ├── routes
-│   │   └── AppRoutes.jsx
-│   ├── server.js
+│   │   ├── AdminRoutes.jsx
+│   │   ├── AppRoutes.jsx
+│   │   └── UserRoutes.jsx
 │   ├── services
-│   │   ├── authService.js
-│   │   ├── blogService.js
-│   │   ├── bookingService.js
-│   │   ├── emailService.js
-│   │   ├── paymentService.js
-│   │   └── productService.js
-│   ├── store
-│   │   ├── actions.js
-│   │   └── reducers.js
+│   │   ├── adminService.js
+│   │   ├── api.js
+│   │   └── userService.js
+│   ├── types
+│   │   └── user.d.ts
 │   └── utils
-│       ├── apiErrorHandler.js
-│       ├── constants.js
-│       └── formValidation.js
+│       ├── cloudinaryUpload.js
+│       └── helpers.js
+├── tailwind.config.js
 ├── tree.js
-└── tree_Structure.txt
+└── vite.config.js
