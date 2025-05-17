@@ -99,8 +99,10 @@ http://localhost:xxxx
 <<<<<<< HEAD
 ## 📁 Project Directory Structure
 
-```
+
 📂 Religious Website Frontend Tree Structure
+
+```
 
 ├── .env
 ├── .gitignore
@@ -177,6 +179,7 @@ http://localhost:xxxx
 ├── tree.js
 └── vite.config.js
 
+```
 =
 
 
