@@ -100,75 +100,83 @@ http://localhost:xxxx
 ## 📁 Project Directory Structure
 
 ```
-📂 religious-frontend/
-├── public/
+📂 Religious Website Frontend Tree Structure
+
+├── .env
+├── .gitignore
+├── eslint.config.js
+├── frontend_tree.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
 │   └── vite.svg
-├── src/
-│   ├── App.jsx
-│   ├── main.jsx
+├── README.md
+├── src
 │   ├── App.css
-│   ├── index.css
-│   ├── assets/
+│   ├── App.jsx
+│   ├── assets
 │   │   └── react.svg
-│   ├── components/
-│   │   ├── common/
+│   ├── components
+│   │   ├── common
 │   │   │   ├── Footer.jsx
 │   │   │   ├── Loader.jsx
 │   │   │   ├── Navbar.jsx
 │   │   │   └── ProtectedRoute.jsx
-│   │   └── shared/
+│   │   └── shared
 │   │       └── Button.jsx
-│   ├── constants/
+│   ├── constants
 │   │   ├── apiRoutes.js
 │   │   ├── appLabels.js
 │   │   └── userRoles.js
-│   ├── context/
+│   ├── context
 │   │   └── AuthContext.jsx
-│   ├── hooks/
+│   ├── hooks
 │   │   ├── useAuth.js
 │   │   └── useCart.js
-│   ├── layouts/
+│   ├── index.css
+│   ├── layouts
 │   │   ├── AdminLayout.jsx
 │   │   └── UserLayout.jsx
-│   ├── pages/
-│   │   ├── admin/
-│   │   │   ├── AdminDashboard.jsx
+│   ├── main.jsx
+│   ├── pages
+│   │   ├── admin
 │   │   │   ├── AddBlogPost.jsx
-│   │   │   ├── AddProduct.jsx
 │   │   │   ├── AddLiveVideo.jsx
+│   │   │   ├── AddProduct.jsx
+│   │   │   ├── AdminDashboard.jsx
 │   │   │   └── ManageProducts.jsx
-│   │   ├── auth/
+│   │   ├── auth
 │   │   │   ├── Login.jsx
 │   │   │   └── Register.jsx
-│   │   ├── user/
-│   │   │   ├── Home.jsx
-│   │   │   ├── Blog.jsx
-│   │   │   ├── Booking.jsx
-│   │   │   ├── Products.jsx
-│   │   │   ├── PujaBooking.jsx
-│   │   │   ├── Cart.jsx
-│   │   │   └── UserProfile.jsx
 │   │   ├── Contact.jsx
-│   │   └── NotFound.jsx
-│   ├── routes/
-│   │   ├── AppRoutes.jsx
+│   │   ├── NotFound.jsx
+│   │   └── user
+│   │       ├── Blog.jsx
+│   │       ├── Booking.jsx
+│   │       ├── Cart.jsx
+│   │       ├── Home.jsx
+│   │       ├── Products.jsx
+│   │       ├── PujaBooking.jsx
+│   │       └── UserProfile.jsx
+│   ├── routes
 │   │   ├── AdminRoutes.jsx
+│   │   ├── AppRoutes.jsx
 │   │   └── UserRoutes.jsx
-│   ├── services/
+│   ├── services
+│   │   ├── adminService.js
 │   │   ├── api.js
-│   │   ├── userService.js
-│   │   └── adminService.js
-│   ├── types/
+│   │   └── userService.js
+│   ├── types
 │   │   └── user.d.ts
-│   └── utils/
-│       ├── helpers.js
-│       └── cloudinaryUpload.js
-├── .env
-├── .gitignore
+│   └── utils
+│       ├── cloudinaryUpload.js
+│       └── helpers.js
 ├── tailwind.config.js
-├── vite.config.js
-├── postcss.config.js
-└── README.md
+├── tree.js
+└── vite.config.js
+
 =
 
 
